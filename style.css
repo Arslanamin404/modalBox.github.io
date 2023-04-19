@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  font-size: 1.2em;
+  border: 1px solid gray;
+  padding: 10px 20px;
+  margin: auto;
+  width: 90vw;
+}
+.btn {
+  width: 160px;
+  height: 40px;
+  font-size: 0.8em;
+  border-radius: 10px;
+}
+.btn:hover {
+  background-color: rgba(0, 0, 255, 0.678);
+  color: white;
+  cursor: pointer;
+}
+.transparentBox {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+.whiteBox {
+  width: 500px;
+  height: auto;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  z-index: 3;
+  position: fixed;
+  padding-bottom: 20px;
+  top: 20%;
+  left: 50%;
+  /* tO CENTER BOX PUT MARGIN IN NEGATIVE OF HALF OF THE WIDTH */
+  margin-left: -250px;
+}
+.whiteBox {
+  /* Appearing animation */
+  animation: fadeIn 0.4s ease-in both;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 20%, 0);
+  }
+}
+.close-btn {
+  float: right;
+  margin: 5px 6px;
+  padding: 0px 8px;
+  font-size: 1.8em;
+  border: transparent;
+  /* font-weight: bolder; */
+}
+.close-btn:hover {
+  background-color: #252525;
+  color: white;
+  cursor: pointer;
+}
+.mini-head {
+  font-size: 1.5em;
+  position: relative;
+  top: 10px;
+  text-align: center;
+  text-shadow: 4px 4px 5px #252525;
+  margin: 0 40px 20px 0;
+  width: 455px;
+}
+.content {
+  position: relative;
+  margin: 0px 20px;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+}
+#logIn{
+  background: #2c65e0;
+  color: #eee; 
+  border: 2px solid #2c65e0;
+  margin-top: 15px;
+  padding: 8px 20px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  font-family: "Times New Roman", Times, serif;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+#logIn:hover{
+  background: #0051ff;
+}
+#dismiss {
+  margin-top: 15px;
+  padding: 8px 20px;
+  background: #111;
+  color: #f5f5f5;
+  border: 2px solid #111;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  font-family: "Times New Roman", Times, serif;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+#dismiss:hover {
+  color: #111;
+  background: #f5f5f5;
+}
+@media screen and (max-width: 740px) {
+  .whiteBox {
+    width: 80vw;
+    height: auto;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    z-index: 3;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    /* overflow: scroll; */
+    padding: 5px 5px;
+    margin-left: -40vw; /*tO CENTER BOX PUT MARGIN IN NEGATIVE OF HALF OF THE WIDTH*/
+    animation: fadeIn 0.4s ease-in both;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -10%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 10%, 0);
+    }
+  }
+  .close-btn {
+    font-size: 1.5em;
+    padding: 2px 5px;
+  }
+  .mini-head {
+    width: 220px;
+    width: 220px;
+    margin: 10px auto 25px;
+  }
+  .content {
+    position: relative;
+    line-height: 6vw;
+    font-size: 1.2em;
+    padding: 0;
+  }
+  .flexContainer{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+  }
+  #logIn,#dismiss {
+    margin: 5px 10px;
+  }
+}
